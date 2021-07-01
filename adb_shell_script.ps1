@@ -10,6 +10,10 @@ adb shell ls /sdcard
 adb shell
 
 
+
+
+
+
 Write-Host "---------------"
 Write-Host "Killing Server"
 adb kill-server

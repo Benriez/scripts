@@ -5,7 +5,7 @@ echo "---------------------------------"
 
 
 #path to sdk platform tools
-# cd "/mnt/c/Users/Benny/AppData/Local/Android/Sdk/platform-tools"
+cd "/mnt/c/Users/Benny/AppData/Local/Android/Sdk/platform-tools"
 
 # echo $PWD
 # exec bash
