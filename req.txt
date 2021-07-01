@@ -1,0 +1,60 @@
+adb logcat -c
+adb logcat <de.fahrschule360.fahrschule360Alpha>
+adb logcat <de.fahrschule360>
+adb logcat -c && adb logcat de.fahrschule360.fahrschule360Alpha:V
+
+
+adb devices
+adb shell pm enable com.pvr.launcher
+
+
+adb shell pm disable-user com.pvr.launcher
+
+#dev
+adb shell pm grant de.fahrschuke360.fahrschule360Alpha android.permission.WRITE_SECURE_SETTINGS
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+Todo:
+textfile auf android mit bashscript pushen
+
+
+---------------------------------------------------------------------------------------------------------
+
+ADB Guide
+https://www.codeproject.com/Articles/825304/Accessing-internal-data-on-Android-device
+
+
+ADB Commands
+https://adbshell.com/commands/adb-push
+
+#grant permission
+grant <PACKAGE_PERMISSION>
+
+
+PreStep:
+	Enable Root (check developer mode on)
+
+
+Step 1: CD into android sdk platformtools
+	Windows:
+		C:\Users\Benny\AppData\Local\Android\Sdk\platform-tools
+
+
+Step 2: in platformtools directory we can execute adb command
+
+
+Step 3: Excecute Commands with adb shell + linux command
+
+
+Exit ADB Shell: STR + D
+
+
+
+---------------------------------------------------------------------------------------------------------
+Powershell
+
+# Start script
+bash ./script.sh 
