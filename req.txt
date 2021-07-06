@@ -1,20 +1,3 @@
-adb logcat -c
-adb logcat <de.fahrschule360.fahrschule360Alpha>
-adb logcat <de.fahrschule360>
-adb logcat -c && adb logcat de.fahrschule360.fahrschule360Alpha:V
-
-
-adb devices
-adb shell pm enable com.pvr.launcher
-
-
-adb shell pm disable-user com.pvr.launcher
-
-#dev
-adb shell pm grant de.fahrschuke360.fahrschule360Alpha android.permission.WRITE_SECURE_SETTINGS
-
-
-
 ---------------------------------------------------------------------------------------------------------
 
 Todo:
@@ -23,6 +6,8 @@ textfile auf android mit bashscript pushen
 
 ---------------------------------------------------------------------------------------------------------
 
+
+
 ADB Guide
 https://www.codeproject.com/Articles/825304/Accessing-internal-data-on-Android-device
 
@@ -30,12 +15,34 @@ https://www.codeproject.com/Articles/825304/Accessing-internal-data-on-Android-d
 ADB Commands
 https://adbshell.com/commands/adb-push
 
+adb logcat -c
+adb logcat <de.fahrschule360.fahrschule360Alpha>
+adb logcat <de.fahrschule360>
+adb logcat -c && adb logcat de.fahrschule360.fahrschule360Alpha:V
+
+
+adb devices
+adb shell pm enable com.pvr.launcher
+adb shell pm disable-user com.pvr.launcher
+
+#dev
+adb shell pm grant de.fahrschule360.fahrschule360Alpha android.permission.WRITE_SECURE_SETTINGS
+
 #grant permission
 grant <PACKAGE_PERMISSION>
 
 
-PreStep:
-	Enable Root (check developer mode on)
+#You can use the code below to install application from command line
+adb install example.apk
+
+
+#this apk is installed in the internal memory of current opened emulator.
+adb install -s example.apk
+
+
+#Use to install/update an app. The -r will update the app if it's already installed
+adb install -r example.apk
+
 
 
 Step 1: CD into android sdk platformtools
@@ -43,7 +50,7 @@ Step 1: CD into android sdk platformtools
 		C:\Users\Benny\AppData\Local\Android\Sdk\platform-tools
 
 
-Step 2: in platformtools directory we can execute adb command
+Step 2: in platformtools directory we can execute adb commands
 
 
 Step 3: Excecute Commands with adb shell + linux command
@@ -56,5 +63,21 @@ Exit ADB Shell: STR + D
 ---------------------------------------------------------------------------------------------------------
 Powershell
 
+# Start bash
+bash
+
 # Start script
 bash ./script.sh 
+
+
+---------------------------------------------------------------------------------------------------------
+Bevor die apk installiert wird
+internal storage /android/app/ de.fahrschule360 ordner erstellen
+pvr launcher deactivieren
+
+
+
+---------------------------------------------------------------------------------------------------------
+Diff
+
+diff directory or content inside file with diff command
